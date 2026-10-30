@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro Álbum de Recuerdos 🚴‍♂️🚴‍♀️</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Audio de fondo -->
+  <audio id="bg-music" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Botón de música -->
+  <button id="music-btn" class="music-toggle">
+    🎵 Activar Música
+  </button>
+
+  <main class="album-container">
+
+    <!-- PÁGINA 1 DEL ÁLBUM -->
+    <section class="book-page">
+      <div class="page-header">
+        <h2>Nuestra Ruta en Bici 🌿</h2>
+        <p class="date">2026.10.30</p>
+      </div>
+
+      <div class="scrapbook-grid">
+        
+        <div class="polaroid pos-1">
+          <div class="photo-frame">
+            <img src="foto1.jpg" alt="Foto 1">
+          </div>
+          <div class="caption">«Juntitos mi amor💖»</div>
+        </div>
+
+        <div class="polaroid pos-2">
+          <div class="photo-frame">
+            <img src="foto2.jpg" alt="Foto 2">
+          </div>
+          <div class="caption">«Me encanta estar contigo💕»</div>
+        </div>
+
+        <div class="polaroid pos-3">
+          <div class="photo-frame">
+            <img src="foto3.jpg" alt="Foto 3">
+          </div>
+          <div class="caption">«Pausa con la mejor vista»</div>
+        </div>
+
+        <div class="polaroid pos-4">
+          <div class="photo-frame">
+            <img src="foto4.jpg" alt="Foto 4">
+          </div>
+          <div class="caption">«Comodo a tu lad🥰»</div>
+        </div>
+
+        <div class="polaroid pos-5">
+          <div class="photo-frame">
+            <img src="foto5.jpg" alt="Foto 5">
+          </div>
+          <div class="caption">«Sintiendo la libertad»</div>
+        </div>
+
+        <div class="polaroid pos-6">
+          <div class="photo-frame">
+            <img src="foto6.jpg" alt="Foto 6">
+          </div>
+          <div class="caption">«Cansados pero felices»</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PÁGINA 2 DEL ÁLBUM -->
+    <section class="book-page">
+      <div class="page-header">
+        <h2>Memorias del Camino ✨</h2>
+      </div>
+
+      <div class="scrapbook-grid">
+        
+        <div class="polaroid pos-7">
+          <div class="photo-frame">
+            <img src="foto7.jpg" alt="Foto 7">
+          </div>
+          <div class="caption">«Mirar atrás y sonreír»</div>
+        </div>
+
+        <div class="polaroid pos-8">
+          <div class="photo-frame">
+            <img src="foto8.jpg" alt="Foto 8">
+          </div>
+          <div class="caption">«Naturaleza y nosotros»</div>
+        </div>
+
+        <div class="polaroid pos-9">
+          <div class="photo-frame">
+            <img src="foto9.jpg" alt="Foto 9">
+          </div>
+          <div class="caption">«Adoro tu carita😍»</div>
+        </div>
+
+        <div class="polaroid pos-10">
+          <div class="photo-frame">
+            <img src="foto10.jpg" alt="Foto 10">
+          </div>
+          <div class="caption">«Coleccionando horizontes»</div>
+        </div>
+
+        <div class="polaroid pos-11">
+          <div class="photo-frame">
+            <img src="foto11.jpg" alt="Foto 11">
+          </div>
+          <div class="caption">«Rodar hacia el atardecer»</div>
+        </div>
+
+        <div class="polaroid pos-12">
+          <div class="photo-frame">
+            <img src="foto12.jpg" alt="Foto 12">
+          </div>
+          <div class="caption">«Por mil rutas más juntos ❤️»</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('music-btn');
+
+    musicBtn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+        musicBtn.textContent = '⏸️ Pausar Música';
+      } else {
+        music.pause();
+        musicBtn.textContent = '🎵 Activar Música';
+      }
+    });
+  </script>
+
+</body>
+</html>
